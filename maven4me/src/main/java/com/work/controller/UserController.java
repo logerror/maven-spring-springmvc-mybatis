@@ -19,7 +19,6 @@ public class UserController {
    @RequestMapping("/showUser")  
    public String toIndex(HttpServletRequest request,User users,Model model){  
        //int userId = Integer.parseInt(request.getParameter("id"));
-	   System.out.println(users.getId());
        User user = this.userService.getUserById(users.getId());  
        model.addAttribute("user2", user);  
        return "showUser";  
